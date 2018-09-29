@@ -11,7 +11,7 @@ const PageProjects = ({ data }) => (
     <div className="projects">
       <div className="container row pt-2 pb-2">
         {data.allWordpressWpProjects.edges.map(project => (
-          <div key={project.node.id} className="project p-md-1 col-12 col-lg-6">
+          <div key={project.node.id} className="project pb-3 pr-md-1 pl-md-1 pb-md-1 pt-md-1 col-12 col-lg-6">
             <div className="project__wrap block--shadow text-center">
               <h2 dangerouslySetInnerHTML={{ __html: project.node.title }} />
               <p className="p-1 text--secondary"
