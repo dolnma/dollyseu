@@ -84,22 +84,22 @@ const HomePage = ({ data }) => (
       </div>
       <div className="row featurimg container text-center">
         <div className="col-6 col-sm-2">
-          <img src={imgwp} />
+          <img alt="Wordpress" src={imgwp} />
         </div>
         <div className="col-6 col-sm-2">
-          <img src={imgreact} />
+          <img alt="ReactJS"src={imgreact} />
         </div>
         <div className="col-6 col-sm-2">
-          <img src={imgnodejs} />
+          <img alt="Nodejs" src={imgnodejs} />
         </div>
         <div className="col-6 col-sm-2">
-          <img src={imgnpm} />
+          <img alt="NPM" src={imgnpm} />
         </div>
         <div className="col-6 col-sm-2">
-          <img src={imghtml} />
+          <img alt="HTML5"src={imghtml} />
         </div>
         <div className="col-6 col-sm-2">
-          <img src={imgcss} />
+          <img alt="CSS"src={imgcss} />
         </div>
       </div>
       <div className="row block--primary p-1 mt-lg-4 p-lg-4">
@@ -127,14 +127,6 @@ const HomePage = ({ data }) => (
       </div>
     </div>
   </div>
-
-  {/* <div className="footer">
-    <div className="row p-1 text-center block-center">
-    <div className="footer__icon p-1"><a href="https://www.facebook.com/mdolnicek"><img height="30" src={svgFb} /></a></div>
-    <div className="footer__icon p-1"><a href="https://www.instagram.com/dollysdev"><img height="30" src={svgIg} /></a></div>
-    <div className="footer__icon p-1"><a href="https://www.linkedin.com/in/marek-doln%C3%AD%C4%8Dek-79482561/"><img height="30" src={svgLinkedin} /></a></div>
-    </div>
-  </div> */}
 
   {/* {data.allWordpressPage.edges.map(document => (
   <div key={document.node.id} dangerouslySetInnerHTML={{ __html: document.node.content }} />

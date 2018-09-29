@@ -11,7 +11,7 @@ const PageProjects = ({ data }) => (
     <div className="projects">
       <div className="container row pt-2 pb-2">
         {data.allWordpressWpProjects.edges.map(project => (
-          <div key={project.node.id} className="project col-12 col-lg-6">
+          <div key={project.node.id} className="project p-md-1 col-12 col-lg-6">
             <div className="project__wrap block--shadow text-center">
               <h2 dangerouslySetInnerHTML={{ __html: project.node.title }} />
               <p className="p-1 text--secondary"
@@ -52,7 +52,7 @@ const PageProjects = ({ data }) => (
                   }
                 })()}
               </div>
-              <a href={project.node.acf.url}><img
+              <a href={project.node.acf.url}><img alt="project"
                 src={
                   project.node.acf.image.localFile.childImageSharp.resize.src
                 }

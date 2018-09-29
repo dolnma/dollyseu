@@ -32,7 +32,7 @@ const IndexPage = ({ data, pathContext }) => {
             {group.map(({ node }) => (
                 <div key={node.slug} className={"post"}>
 
-                <img src={node.acf.image.source_url} />
+                <img alt="post image" src={node.acf.image.source_url} />
 
 
                     <Link to={'/post/' + node.slug}>
