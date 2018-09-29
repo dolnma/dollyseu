@@ -1,0 +1,154 @@
+.content {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+
+    @include break(sm) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    &__wrap {
+        position: relative;
+
+        &__text {
+            padding: 2rem 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include break(lg) {
+                position: absolute;
+                height: 100%;
+            }
+
+            &--services__title {
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+
+        &__progressbar {
+            padding: 1rem 0;
+        }
+
+        &--welcome {
+            position: relative;
+            height: 100%;
+            color: $white;
+            background-image: url("../img/content__bg.jpg");
+            background-position: center;
+            background-size: cover;
+
+            @include break(lg) {
+                height: 96vh;
+            }
+
+            // h1 {
+            //     font-size: 2rem;
+            //     line-height: 2.5rem;
+            //     @include break(sm) {
+            //        font-size: 2.6rem;
+            //     }
+            // }
+            // h2 {
+
+            // }
+
+            p {
+                padding: 1rem 0;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to bottom right, darken($primary, 15%), darken($third, 20%));
+                opacity: 0.9;
+            }
+
+            & .btn {
+                margin: 3rem;
+            }
+            & .avatar {
+                margin: 0 auto;
+            }
+        }
+
+        &--skills {
+            position: relative;
+            height: 100%;
+            color: $primary;
+            // background-image: url("../img/content__skills-bg.jpg");
+            // background-position: center;
+            // background-size: cover;
+
+            @include break(lg) {
+                height: 96vh;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to bottom right, lighten($primary, 60%), lighten($third, 60%));
+                opacity: 0.9;
+            }
+
+            h2 {
+                font-size: 2.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            p {
+                padding: 1rem;
+            }
+        }
+
+        &--services {
+            position: relative;
+            height: 100%;
+            color: $white;
+            background-image: url("../img/content__skills-bg.jpg");
+            background-position: center;
+            background-size: cover;
+            font-size: 1.4rem;
+            line-height: 2rem;
+
+            @include break(lg) {
+                height: 96vh;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to bottom right, darken($secondary, 50%), darken($fourth, 50%));
+                opacity: 0.9;
+            }
+
+            h3 {
+                color: $third;
+                font-size: 2.2rem;
+                line-height: 2.6rem;
+                font-weight: bold;
+            }
+
+            & .btn {
+                margin: 3rem;
+            }
+        }
+    }
+
+    @include break(md) {}
+}

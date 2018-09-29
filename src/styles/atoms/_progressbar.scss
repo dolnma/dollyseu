@@ -1,0 +1,28 @@
+.progressbar {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+
+    span {
+        display: block;
+        height: 1.2rem;
+        border-radius: 0.3rem;
+    
+        transition: width 500ms ease-in-out;
+    }
+
+    &--primary {
+        background-color: $primary;
+    }
+    &--secondary {
+        background-color: $secondary;
+    }
+    &--third {
+        background-color: $third;
+    }
+    &--fourth {
+        background-color: $fourth;
+    }
+}

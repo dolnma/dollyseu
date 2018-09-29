@@ -1,0 +1,32 @@
+.contact {
+    height:100vh;
+    background-image: url("../img/contact__bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    &__info {
+        font-size: 1.2rem;
+        background-color: $white;
+        padding: 2rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include break(sm) {
+            font-size: 2rem;
+            margin-top: 10rem;
+            max-height: 17rem;
+        }
+
+        & .icon {
+            padding-right: 1rem;
+        }
+
+        div {
+            padding: 0.5rem;
+        }
+    }
+}

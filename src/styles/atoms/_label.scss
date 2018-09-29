@@ -1,0 +1,20 @@
+.label {
+    padding: 0.8rem 1rem;
+
+    &--primary {
+        background-color: $primary;
+        color: $white;
+    }
+    &--secondary {
+        background-color: $secondary;
+        color: $white;
+    }
+    &--third {
+        background-color: $third;
+        color: $black;
+    }
+    &--fourth {
+        background-color: $fourth;
+        color: $black;
+    }
+}

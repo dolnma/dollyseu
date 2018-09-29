@@ -1,0 +1,34 @@
+$header-h: 4rem;
+
+$container-w-lg: 80rem;
+$container-w-md: 60rem;
+$container-w-sm: 100%;
+$container-w-xs: 100%;
+
+$breakpoints: (
+	"": "",
+	xs: 512px,
+	sm: 768px,
+	md: 896px,
+	lg: 1152px,
+	xl: 1280px
+);
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.2rem;
+$font-size-p: 1rem;
+
+//
+$primary: #282F4C;
+$secondary: #1F2033;
+$third: #C46347;
+$fourth: #EFBD85;
+$fifth: #FDEDCF;
+
+
+$green: #156121;
+$white: #ffffff;
+$white-dark: #FAFAFA;
+$white-light: lighten($white, 50%);
+$black: #000000;

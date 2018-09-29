@@ -1,0 +1,208 @@
+.navbar {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+
+    @include break(xs) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0;
+    }
+
+    @include break(sm) {
+        display: block;
+    }
+
+
+    & a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        @include break(xs) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
+    & li {
+        border-bottom: 0.0625rem solid lighten($secondary, 15%);
+        padding: 0 1rem;
+        display: inline-block;
+        line-height: $header-h + 0.2rem;
+
+        @include break(sm) {
+            border-bottom: 0.2rem solid transparent;
+        }
+
+        @include break(xs) {
+            border-bottom: 0;
+        }
+
+        &:hover,
+        &:focus {
+            @include break(sm) {
+                background-color: lighten($secondary, 5%);
+                border-bottom: 0.2rem solid $third;
+            }
+        }
+
+        @include break(sm) {
+            flex: 1 1 auto;
+            border: none;
+        }
+
+        &:last-child {
+            border-bottom: none;
+
+            @include break(sm) {
+                border-bottom: 0.2rem solid transparent;
+
+                &:hover {
+                    border-bottom: 0.2rem solid $third;
+                }
+            }
+        }
+
+        a {
+            margin: 0;
+            border: none;
+        }
+    }
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, $secondary 0%, $primary 100%);
+
+    @include break(xs) {
+        display: none;
+    }
+
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 1rem;
+    right: 15px;
+    height: 26px;
+    width: 35px;
+    padding: 0.3rem;
+    background-color: $secondary;
+
+    @include break(xs) {
+        display: none;
+    }
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $third;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}

@@ -1,0 +1,16 @@
+.projects {
+    background-image: linear-gradient(to bottom right, darken($primary, 15%), darken($third, 20%));
+    background-size: cover;
+
+    &__title {
+        width: 100%;
+        background-color: $fifth;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin: 0;
+        }
+    }
+}

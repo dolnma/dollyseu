@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    align-items: center;
+    background: $secondary;
+    height: auto;
+    position: sticky;
+    width:100%;
+    top:0;
+    right:0;
+    z-index: 1;
+
+    @include break(xs) {
+        height: $header-h;
+    }
+
+    a {
+        color: $third;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include break(xs) {
+            justify-content: space-between;
+        }
+
+        &__left {
+            justify-content: flex-start;
+            display: none;
+
+            @include break(xs) {
+                display: block;
+            }
+        }
+
+        &__right {
+            justify-content: flex-end;
+        }
+    }
+}

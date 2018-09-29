@@ -1,0 +1,45 @@
+.text {
+    line-height: 1.5rem;
+    &--primary {
+        color: $primary;
+        a {
+            color: $primary;
+        }
+    }
+    &--secondary {
+        color: $secondary;
+        a {
+            color: $secondary;
+        }
+    }
+    &--third {
+        color: $third;
+        a {
+            color: $third;
+        }
+    }
+    &--fourth {
+        color: $fourth;
+        a {
+            color: $fourth;
+        }
+    }
+    &--fifth {
+        color: $fifth;
+        a {
+            color: $fifth;
+        }
+        &--darken {
+            color: darken($fifth, 50%);
+        }
+    }
+    &--white {
+        color: $white;
+        a {
+            color: $white;
+        }
+    }
+}
+.text-center {
+    text-align: center;
+}

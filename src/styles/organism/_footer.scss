@@ -1,0 +1,11 @@
+.footer {
+    background-color: $black;
+
+    &__icon {
+
+        &:hover {
+            border-bottom: 0.1rem solid $third;
+            background: $secondary;
+        }
+    }
+}

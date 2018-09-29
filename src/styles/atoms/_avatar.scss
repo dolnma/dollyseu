@@ -1,0 +1,9 @@
+.avatar {
+    vertical-align: middle;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    border: 0.1rem solid $third;
+    background-image: url("../img/avatar.jpg");
+    background-size: cover;
+}

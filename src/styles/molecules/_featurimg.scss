@@ -1,0 +1,13 @@
+.featurimg {
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 8rem;
+        max-height: 6rem;
+
+        @include break(sm) {
+            max-width: 12rem;
+            max-height: 5rem;
+        }
+    }
+}
